@@ -62,8 +62,9 @@ It retains the original runbook style, shows computed counts and expandable
 evidence, and links to the five issues. The original CauseTable, DedupeExplorer,
 and QueueTimeline remain visible. The index discovers the page automatically.
 
-Signature: `Pi — MEGA.dev S01E03 review`. RenderStamp derives desk ref
-`DR-CCVA-35BS`; this is an attribution stamp, not a cryptographic signature.
+The frontmatter carries the course-issued ticket as its exact `signature`, with
+Pi identified separately as author. RenderStamp derives the desk reference from
+that signature; this is the course's page-attribution mechanism.
 
 The rendered site, source copy, and build hashes are in `rendered/`.
 Build and render tests cover the signature, counts, source links, and output

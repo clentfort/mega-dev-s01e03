@@ -4,7 +4,8 @@ title: '#4471 · split the problems, not just the subjects'
 owner: course review
 status: review
 reviewed: 2026-10-28
-signature: 'Pi — MEGA.dev S01E03 review'
+author: Pi
+signature: 'v1.eyJzdG9yeSI6Im9mZiIsInN1YiI6IjI3NzkiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzIyMzA3NSwiZXhwIjoxNzkzMzA5NDc1fQ.9dgW3S1X8AXK595R7Qa1FcEKvv_Oaq6tmp0J-YIvc5k'
 ---
 
 <script>
