@@ -1,0 +1,87 @@
+---
+layout: runbook
+title: '#4471 · split the problems, not just the subjects'
+owner: course review
+status: review
+reviewed: 2026-10-28
+signature: 'Pi — MEGA.dev S01E03 review'
+---
+
+<script>
+  import Callout from '#lib/kb/Callout.svelte';
+  import ScrollRegion from '#lib/kb/ScrollRegion.svelte';
+  import ReportReview from '#lib/kb/ReportReview.svelte';
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+The [original incident page](/kb/incidents/4471/) says one date-parsing fix will
+cover the ticket. The evidence does not support treating every report that way.
+
+<Callout kind="warn">
+  Review based on the 2026-10-04 export, not the current queue.
+  The linked GitHub issues track the proposed split. Investigation tickets describe
+  questions to resolve, not confirmed root causes.
+</Callout>
+
+## Proposed ticket split
+
+<ReportReview />
+
+## Similar symptoms, different fixes
+
+A shared parser can misread a correctly entered day-first date. Separately,
+booking-v3 tells people to enter month first while interpreting their entry
+in the tenant's day-first convention.
+
+Fixing the parser does not automatically make the form's hint correct.
+The remaining investigations need their own evidence before choosing a fix.
+
+## What the automatic classifier says
+
+<ScrollRegion label="Original automatic classification">
+  <CauseTable ticket={4471} />
+</ScrollRegion>
+
+That table uses tenant locale, booking form, and channel. It does not read the
+report body. Our review keeps its result visible but separates reports whose
+descriptions do not establish the same date-swap mechanism.
+
+Intake tags are browser-based guesses, not root-cause findings. Count unique
+report IDs; do not count overlapping export rows again.
+
+## Triage by evidence
+
+The [accepted subject-matching rule](/kb/decisions/0001-dedupe-by-subject/) can merge
+different problems and keep duplicates apart. The executable examples show why:
+
+<DedupeExplorer />
+
+Use tenant settings and the affected path to understand a report. Compare its
+body and evidence before merging. Unknown context is a reason to investigate,
+not to guess. Keep unresolved symptoms separate until a common cause is established.
+
+This proposes a replacement for the [existing triage advice](/kb/triage/dedupe/).
+Decision 0001 remains unchanged; a new decision record would be needed to replace it.
+
+## Read the queue correctly
+
+<QueueTimeline ticket={4471} />
+
+Reports received and reports merged are different events. A spike in merging can
+be backlog processing; it is not the start of the defect or a surge of new reports.
+
+## Sources and next review
+
+The counts above are computed from the exported reports and tenant directory.
+The [original classifier](/evidence/causes.ts),
+[desk notes](/evidence/desk-notes.json), and
+[reviewed assignments](/evidence/report-review.json) explain the two views.
+
+Gather the missing evidence listed in each investigation and revise the issue
+assignments when it arrives. Reconcile newer desk data if available.
+No report should disappear or be counted under more than one proposed ticket.
+
+<RenderStamp {signature} />

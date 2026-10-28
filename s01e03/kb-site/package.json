@@ -1,0 +1,32 @@
+{
+  "name": "mega-dev-s01e03-kb",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#lib/kb/*.svelte": "./src/lib/kb/*.svelte",
+    "#lib/kb/*": "./src/lib/kb/*.ts",
+    "#lib/data/*": "./src/lib/data/*",
+    "#lib/layouts/*": "./src/lib/layouts/*"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-inputs.mjs",
+    "dev": "npm run sync && vite --host 127.0.0.1",
+    "check": "npm run sync && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "build": "npm run sync && vite build && node scripts/export-page.mjs",
+    "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort",
+    "test": "node --test scripts/render.test.mjs"
+  },
+  "devDependencies": {
+    "@opentelemetry/api": "1.10.0",
+    "@sveltejs/adapter-static": "4.0.0",
+    "@sveltejs/kit": "3.1.0",
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "@types/node": "24.19.2",
+    "mdsvex": "0.12.8",
+    "svelte": "5.57.2",
+    "svelte-check": "4.7.7",
+    "typescript": "6.0.3",
+    "vite": "8.3.5"
+  }
+}

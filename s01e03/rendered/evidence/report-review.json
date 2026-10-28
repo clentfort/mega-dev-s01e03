@@ -1,0 +1,27 @@
+[
+  {
+    "reportId": "R-41202",
+    "problem": "one-day-shift",
+    "expectedBody": "Invite says Tuesday 12 May. Calendar says Monday 11 May. My client turned up on the Monday. We had coffee."
+  },
+  {
+    "reportId": "R-41209",
+    "problem": "one-day-shift",
+    "expectedBody": "Every booking in June is one day off. Only June. Why only June."
+  },
+  {
+    "reportId": "R-41620",
+    "problem": "one-day-shift",
+    "expectedBody": "Tuesday 6 October showed as Monday. I moved it myself. I have stopped reporting these but my colleague says it helps you."
+  },
+  {
+    "reportId": "R-41344",
+    "problem": "cross-zone-day",
+    "expectedBody": "Client in Lisbon got Tuesday. Client in Toronto got Monday. Same meeting. We held it twice."
+  },
+  {
+    "reportId": "R-41236",
+    "problem": "invite-before-booking",
+    "expectedBody": "The invite arrived before I made the booking. I would like to know how."
+  }
+]

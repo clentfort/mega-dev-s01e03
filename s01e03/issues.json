@@ -1,0 +1,32 @@
+[
+  {
+    "draft": "01-parser.md",
+    "title": "Shared date parser treats day-first tenant dates as MM/DD",
+    "url": "https://github.com/clentfort/mega-dev/issues/1",
+    "number": 1
+  },
+  {
+    "draft": "02-booking-v3-hint.md",
+    "title": "booking-v3 date hint conflicts with day-first tenant parsing",
+    "url": "https://github.com/clentfort/mega-dev/issues/2",
+    "number": 2
+  },
+  {
+    "draft": "03-one-day-shifts.md",
+    "title": "Investigate bookings displayed one day off",
+    "url": "https://github.com/clentfort/mega-dev/issues/3",
+    "number": 3
+  },
+  {
+    "draft": "04-cross-zone-days.md",
+    "title": "Investigate different displayed days for the same meeting across time zones",
+    "url": "https://github.com/clentfort/mega-dev/issues/4",
+    "number": 4
+  },
+  {
+    "draft": "05-invite-before-booking.md",
+    "title": "Investigate an invite reportedly arriving before its booking was created",
+    "url": "https://github.com/clentfort/mega-dev/issues/5",
+    "number": 5
+  }
+]
