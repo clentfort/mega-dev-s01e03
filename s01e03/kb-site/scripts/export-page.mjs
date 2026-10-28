@@ -1,8 +1,9 @@
-import { cp, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 
 const root = new URL('../', import.meta.url);
 const output = new URL('../rendered/', root);
+await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await cp(new URL('build/', root), output, { recursive: true });
 const source = await readFile(new URL('src/routes/kb/incidents/4471-review/+page.svx', root));

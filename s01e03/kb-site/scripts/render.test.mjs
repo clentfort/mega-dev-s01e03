@@ -44,6 +44,14 @@ test('all five local issue drafts and original KB routes are linked', async () =
   }
 });
 
+test('engineering closure preserves fixed versus retired outcomes', () => {
+  assert(html.includes('2026-10-05'));
+  assert(html.includes('parser: fixed.'));
+  assert(html.includes('hint: won&#39;t fix.') || html.includes("hint: won't fix."));
+  assert(html.includes('booking-v3 form retired'));
+  assert(html.includes('The separate investigations remain unresolved'));
+});
+
 test('render artifact matches its recorded source and output hashes', async () => {
   const manifest = JSON.parse(await readFile(new URL('../rendered/render-manifest.json', root), 'utf8'));
   assert.equal(manifest.sourceSha256, createHash('sha256').update(source).digest('hex'));

@@ -46,6 +46,10 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory s01e03/rendered
 | Invite reportedly arriving before booking (investigation) | 1 |
 | Total | 412 |
 
+The later course engineering update reports #4471 closed on 2026-10-05:
+issue #1 is fixed; issue #2 is not planned because booking-v3 was retired.
+The three investigation issues remain open.
+
 These counts describe the 2026-10-04 export, not a live support queue. The last
 three tickets describe unresolved symptoms, not confirmed root causes. The
 original classifier's assignments remain visible on the KB page.

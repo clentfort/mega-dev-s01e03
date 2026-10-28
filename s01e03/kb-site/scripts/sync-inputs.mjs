@@ -14,6 +14,7 @@ for (const [source, name] of [
   ['src/lib/kb/causes.ts', 'causes.ts'],
   ['src/lib/data/desk-notes.json', 'desk-notes.json'],
   ['src/lib/data/report-review.json', 'report-review.json'],
+  ['src/lib/data/engineering-update.json', 'engineering-update.json'],
 ]) {
   await copyFile(new URL(source, root), new URL(name, evidence));
 }

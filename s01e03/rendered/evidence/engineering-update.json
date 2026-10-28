@@ -1,0 +1,18 @@
+{
+  "source": "https://hq.mega.dev/challenges/what-it-shows",
+  "retrievedAt": "2026-10-28",
+  "ticket": 4471,
+  "closedAt": "2026-10-05",
+  "outcomes": {
+    "parser": {
+      "status": "fixed",
+      "detail": "fix(dates): parse dd/mm for eu locales",
+      "issueNumber": 1
+    },
+    "hint": {
+      "status": "won't fix",
+      "detail": "booking-v3 form retired",
+      "issueNumber": 2
+    }
+  }
+}

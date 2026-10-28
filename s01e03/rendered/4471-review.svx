@@ -9,6 +9,7 @@ signature: 'Pi — MEGA.dev S01E03 review'
 
 <script>
   import Callout from '#lib/kb/Callout.svelte';
+  import EngineeringUpdate from '#lib/kb/EngineeringUpdate.svelte';
   import ScrollRegion from '#lib/kb/ScrollRegion.svelte';
   import ReportReview from '#lib/kb/ReportReview.svelte';
   import CauseTable from '#lib/kb/CauseTable.svelte';
@@ -21,12 +22,14 @@ The [original incident page](/kb/incidents/4471/) says one date-parsing fix will
 cover the ticket. The evidence does not support treating every report that way.
 
 <Callout kind="warn">
-  Review based on the 2026-10-04 export, not the current queue.
-  The linked GitHub issues track the proposed split. Investigation tickets describe
+  Report counts come from the 2026-10-04 export, not the current queue.
+  The engineering update below records the later closure. The linked GitHub issues track the split. Investigation tickets describe
   questions to resolve, not confirmed root causes.
 </Callout>
 
-## Proposed ticket split
+<EngineeringUpdate />
+
+## Report split
 
 <ReportReview />
 
@@ -36,7 +39,8 @@ A shared parser can misread a correctly entered day-first date. Separately,
 booking-v3 tells people to enter month first while interpreting their entry
 in the tenant's day-first convention.
 
-Fixing the parser does not automatically make the form's hint correct.
+The parser fix addresses the first mechanism. The hint issue was not fixed:
+engineering retired booking-v3 instead. These are different outcomes.
 The remaining investigations need their own evidence before choosing a fix.
 
 ## What the automatic classifier says
@@ -80,8 +84,10 @@ The [original classifier](/evidence/causes.ts),
 [desk notes](/evidence/desk-notes.json), and
 [reviewed assignments](/evidence/report-review.json) explain the two views.
 
-Gather the missing evidence listed in each investigation and revise the issue
-assignments when it arrives. Reconcile newer desk data if available.
+The parser and hint tickets can close with different reasons: fixed versus
+not planned after form retirement. Do not call both outcomes a fix.
+Gather the missing evidence listed in each investigation and revise its
+assignment when it arrives. Reconcile newer desk data if available.
 No report should disappear or be counted under more than one proposed ticket.
 
 <RenderStamp {signature} />

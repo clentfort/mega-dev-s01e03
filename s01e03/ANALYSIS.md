@@ -69,6 +69,17 @@ The rendered site, source copy, and build hashes are in `rendered/`.
 Build and render tests cover the signature, counts, source links, and output
 hashes. Browser checks cover evidence expansion and reactive deduplication.
 
+## Engineering update
+
+The course's challenge page subsequently reports #4471 closed on 2026-10-05.
+The parser was fixed (`fix(dates): parse dd/mm for eu locales`); the hint was
+marked won't fix because booking-v3 was retired. Issue #1 is closed as completed;
+issue #2 is closed as not planned. The three investigations remain open because
+this update does not establish their causes.
+
+The signed page records this later update separately from the older count
+snapshot; the original export is unchanged.
+
 ## Follow-up
 
 Gather the evidence requested in the investigation issues. Reconcile newer desk
